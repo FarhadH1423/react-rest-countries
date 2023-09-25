@@ -17,13 +17,25 @@ function LoadCountries(){
     .then(res=>res.json())
     .then(data=> setCountries(data))
 
-
   } , [])
   return(
     <div>
       <h3>Available Countries: {countries.length}</h3>
+      {
+        countries.map(country => <Country name={country.name.common} population= {country.population}></Country>)
+      }
     </div>
   )
+}
+
+function Country(props){
+  return(
+    <div>
+      <p>Name: {props.name}</p>
+      <h4>Population: {props.population}</h4>
+    </div>
+  )
+
 }
 
 export default App;
