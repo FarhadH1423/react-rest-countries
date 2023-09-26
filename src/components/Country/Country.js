@@ -1,10 +1,9 @@
 import React from 'react';
-import './Country.css';
 
-const Country = () => {
+const Country = (props) => {
     return (
         <div>
-            <h2>My World!</h2>
+            <h2>This is Country Name: {props.name}</h2>
         </div>
     );
 };
