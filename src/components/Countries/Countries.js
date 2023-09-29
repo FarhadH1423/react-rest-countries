@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Country from '../Country/Country';
 import './Countries.css'
+import Footer from '../Footer/Footer';
 
 const Countries = () => {
     const [countries, setCountries] = useState([]);
@@ -30,7 +31,9 @@ const Countries = () => {
 
                     </Country>)
                 }
+                
             </div>
+            
         </div>
     );
 };
